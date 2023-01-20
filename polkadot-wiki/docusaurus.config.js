@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
-const isPublishing = process.env.PUBLISHING === "true";
 
 module.exports = {
   title: "Polkadot Wiki",
@@ -105,12 +101,12 @@ module.exports = {
             from: ['/docs/learn-account-restore']
           },
           {
-            to: '/docs/learn-account-generation',
-            from: ['/docs/learn-account-restore']
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
           },
           {
             to: '/docs/learn-system-chains',
-            from: ['/docs/learn-common-good-chains']
+            from: ['/docs/learn-common-goods']
           }
         ],
         createRedirects: function (existingPath) {

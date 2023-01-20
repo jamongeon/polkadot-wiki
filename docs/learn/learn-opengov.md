@@ -11,6 +11,8 @@ import RPC from "./../../components/RPC-Connection";
 
 import VLTable from "./../../components/Voluntary-Locking";
 
+import Fellowship from "./../../components/Fellowship";
+
 {{ polkadot: Polkadot :polkadot }}{{ kusama: Kusama :kusama }} uses a sophisticated governance
 mechanism that allows it to evolve gracefully overtime at the ultimate behest of its assembled
 stakeholders. The stated goal is to ensure that the majority of the stake can always command the
@@ -119,9 +121,9 @@ days. Proposals submitted as part of the enactment of a prior referendum can set
 period as desired. Emergency proposals deal with major problems with the network that need to be
 "fast-tracked", which leads to shorter enactment times.
 
-In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as they
-wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the flow
-and processing of the referenda protocol.
+In OpenGov, anyone is able to start a referendum at any time and they can do so as many times as
+they wish. Several new features, known as **Origins and Tracks**, are introduced to help aid in the
+flow and processing of the referenda protocol.
 
 An Origin can be thought of as a rich descriptor for a given privilege level. The proposer of the
 referenda now selects an appropriate Origin for their request based on the requirements of the
@@ -151,7 +153,7 @@ to show support
 Note that this may be different from the absolute number of endorsements; for instance, three
 accounts bonding
 {{ polkadot: 20 DOT each would "outweigh" ten accounts bonding a single DOT each. :polkadot }}
-{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. }}
+{{ kusama: 3 KSM each would "outweigh" six accounts bonding 0.5 KSM each. :kusama }}
 
 The bonded tokens will be released once the proposal is tabled (that is, brought to a vote).
 
@@ -370,11 +372,12 @@ work well with even tens of thousands of members) and with far lower barrier to 
 of administrative process flow and expectations of expertise). Becoming a candidate member in the
 Fellowship is as easy as placing a small deposit.
 
-Members of the Fellowship can vote on any given Fellowship proposal and the aggregate opinion of the
-members (weighted by their rank) constitutes the Fellowship's considered opinion.
-
 The mechanism by which the Fellowship votes is the same as what is used for Polkadot and Kusama
-stakeholder voting for a proposed referendum.
+stakeholder voting for a proposed referendum. Members of the Fellowship can vote on any given
+Fellowship proposal and the aggregate opinion of the members (weighted by their rank) constitutes
+the Fellowship's considered opinion.
+
+{{ kusama: <Fellowship network="kusama" defaultValue="Loading Kusama Fellows..."/> :kusama }}
 
 ### Ranking System
 
@@ -384,8 +387,8 @@ To prevent a small group of participants from gaining effective control over the
 system will adhere to three main principles:
 
 1. The Fellowship must never have hard power over the network: it cannot change the parameters,
-   conduct rescues or move assets. Their only power in governance resides in the ability to
-   reduce the effective timeline on which a referendum takes place.
+   conduct rescues or move assets. Their only power in governance resides in the ability to reduce
+   the effective timeline on which a referendum takes place.
 2. The Fellowship weights those with a higher rank more in the aggregate opinion, however the weight
    should not be so high as to make a small number of higher members’ opinions be insurmountable
    when compared to a coherent opinion coming from lower-ranked membership.

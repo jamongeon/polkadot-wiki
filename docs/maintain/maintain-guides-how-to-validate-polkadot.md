@@ -452,7 +452,7 @@ Snapshots are compressed backups of the database directory of Polkadot/Kusama no
 whole chain (or a pruned version of it, with states only from the latest 1000 or 256 blocks). Listed
 below are a few public snapshot providers for Polkadot and Kusama.
 
-- [STAKEWORLD](https://stakeworld.nl/docs/snapshot)
+- [Stakeworld](https://stakeworld.io/snapshot)
 - [Polkachu](https://polkachu.com/snapshots)
 - [Polkashots](https://polkashots.io/)
 
@@ -532,7 +532,7 @@ Once your node is fully synced, stop the process by pressing Ctrl-C. At your ter
 will now start running the node.
 
 ```sh
-./target/release/polkadot --validator --name "name on telemetry"
+./target/production/polkadot --validator --name "name on telemetry"
 ```
 
 Similarly:
@@ -684,7 +684,7 @@ other peers over the network.
 ### How do I clear all my chain data?
 
 ```sh
-./target/release/polkadot purge-chain
+./target/production/polkadot purge-chain
 ```
 
 :::info

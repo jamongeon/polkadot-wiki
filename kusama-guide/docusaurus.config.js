@@ -1,9 +1,5 @@
-const { baseUrlPattern } = require("../scripts/utils");
 const { injectPlugin } = require("../scripts/injectPlugin");
-
 const i18n = require("./i18n");
-
-const isBuilding = process.env.BUILDING === "true";
 const isPub = process.env.PUBLISHING === "true";
 
 module.exports = {
@@ -66,6 +62,12 @@ module.exports = {
     [
       '@docusaurus/plugin-client-redirects',
       {
+       redirects: [
+          {
+            to: '/docs/learn-opengov',
+            from: ['/docs/learn-gov2']
+          }
+        ],
         createRedirects: function (existingPath) {
           if (existingPath.startsWith('/docs/')) {
             return [existingPath.replace('/docs/', '/docs/en/')];
